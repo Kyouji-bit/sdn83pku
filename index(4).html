@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SD Negeri 83 Pekanbaru | Website Resmi</title>
+<meta name="description" content="Website resmi SD Negeri 83 Pekanbaru. Informasi profil sekolah, visi dan misi, data sekolah, akreditasi, kontak, dan informasi pendidikan.">
+<meta name="keywords" content="SD Negeri 83 Pekanbaru, sekolah dasar negeri, pendidikan Pekanbaru, SDN 83 Pekanbaru, sekolah dasar Riau">
+<meta property="og:title" content="SD Negeri 83 Pekanbaru | Website Resmi">
+<meta property="og:description" content="Website resmi SD Negeri 83 Pekanbaru. Informasi profil sekolah, visi dan misi, data sekolah, akreditasi, kontak, dan informasi pendidikan.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.riauonline.co.id/foto/bank/images2/SDN-83-Pekanbaru-istimewa.jpg">
+
+<!-- Favicon sederhana berupa emoji buku dalam SVG -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23163B6D%22/><text x=%2250%22 y=%2266%22 font-size=%2255%22 text-anchor=%22middle%22 fill=%22%23F2B33D%22 font-family=%22Georgia, serif%22>83</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+/* =========================================================
+   VARIABEL WARNA & DASAR
+   Admin dapat mengganti warna utama website di sini.
+   ========================================================= */
+:root{
+  --biru-tua:      #133460;   /* warna utama - navbar, judul besar */
+  --biru:          #1E4C8A;   /* biru sekunder untuk gradasi & aksen */
+  --biru-lembut:   #EAF0F9;   /* latar lembut bernuansa biru */
+  --emas:          #C8922A;   /* aksen emas - garis bawah, ikon, badge */
+  --emas-lembut:   #FBF1DD;
+  --hijau:         #2F7A55;   /* aksen hijau kedua - statistik & misi */
+  --tinta:         #1B2430;   /* warna teks utama, bukan hitam pekat */
+  --abu:           #5B6470;   /* teks sekunder */
+  --garis:         #E4E8EF;
+  --putih:         #FFFFFF;
+  --radius-kartu:  14px;
+  --bayangan:      0 10px 30px rgba(19,52,96,0.08);
+  --lebar-maks:    1180px;
+  --font-judul:    'Fraunces', Georgia, serif;
+  --font-teks:     'Inter', -apple-system, sans-serif;
+}
+
+*{ box-sizing:border-box; margin:0; padding:0; }
+
+html{ scroll-behavior:smooth; }
+
+body{
+  font-family:var(--font-teks);
+  color:var(--tinta);
+  background:var(--putih);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+
+img{ max-width:100%; display:block; }
+
+a{ color:inherit; text-decoration:none; }
+
+ul{ list-style:none; }
+
+.wrap{
+  max-width:var(--lebar-maks);
+  margin:0 auto;
+  padding:0 24px;
+}
+
+h1,h2,h3{ font-family:var(--font-judul); font-weight:600; color:var(--biru-tua); }
+
+section{ padding:96px 0; }
+
+/* Fokus keyboard terlihat jelas untuk aksesibilitas */
+a:focus-visible, button:focus-visible, input:focus-visible{
+  outline:3px solid var(--emas);
+  outline-offset:3px;
+}
+
+/* Hormati preferensi pengguna yang mengurangi gerak/animasi */
+@media (prefers-reduced-motion: reduce){
+  *{ animation-duration:0.001ms !important; transition-duration:0.001ms !important; scroll-behavior:auto !important; }
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:var(--emas);
+  font-weight:600;
+  font-size:0.95rem;
+  margin-bottom:12px;
+}
+.eyebrow::before{
+  content:"";
+  width:22px; height:2px;
+  background:var(--emas);
+  display:inline-block;
+}
+
+.judul-section{
+  font-size:clamp(1.7rem, 3vw, 2.4rem);
+  line-height:1.25;
+  margin-bottom:16px;
+}
+
+.subteks{
+  color:var(--abu);
+  font-size:1.05rem;
+  max-width:640px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:14px 28px;
+  border-radius:999px;
+  font-weight:600;
+  font-size:0.98rem;
+  border:2px solid transparent;
+  cursor:pointer;
+  transition:transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.btn-utama{
+  background:var(--emas);
+  color:var(--biru-tua);
+}
+.btn-utama:hover{ transform:translateY(-2px); box-shadow:0 12px 24px rgba(200,146,42,0.35); }
+.btn-luar{
+  background:transparent;
+  border-color:rgba(255,255,255,0.6);
+  color:var(--putih);
+}
+.btn-luar:hover{ background:rgba(255,255,255,0.12); transform:translateY(-2px); }
+.btn-kontak{
+  background:var(--biru-tua);
+  color:var(--putih);
+}
+.btn-kontak:hover{ background:var(--biru); transform:translateY(-2px); }
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+.navbar{
+  position:fixed;
+  top:0; left:0; right:0;
+  z-index:1000;
+  padding:20px 0;
+  transition:padding 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+.navbar .wrap{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.navbar-brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-family:var(--font-judul);
+  font-weight:600;
+  font-size:1.05rem;
+  color:var(--putih);
+  transition:color 0.3s ease;
+}
+.navbar-brand .lencana{
+  width:42px; height:42px;
+  border-radius:50%;
+  background:var(--emas);
+  color:var(--biru-tua);
+  display:flex; align-items:center; justify-content:center;
+  font-weight:700;
+  font-family:var(--font-teks);
+  font-size:0.95rem;
+  flex-shrink:0;
+}
+.navbar-brand span{ display:block; }
+.navbar-brand small{
+  display:block;
+  font-family:var(--font-teks);
+  font-weight:500;
+  font-size:0.72rem;
+  letter-spacing:0.02em;
+  opacity:0.85;
+}
+.navbar-menu{
+  display:flex;
+  align-items:center;
+  gap:32px;
+  list-style:none;
+}
+.navbar-menu a{
+  color:var(--putih);
+  font-weight:500;
+  font-size:0.95rem;
+  position:relative;
+  padding-bottom:4px;
+  transition:color 0.3s ease;
+}
+.navbar-menu a::after{
+  content:"";
+  position:absolute;
+  bottom:0; left:0;
+  width:0; height:2px;
+  background:var(--emas);
+  transition:width 0.25s ease;
+}
+.navbar-menu a:hover::after,
+.navbar-menu a:focus-visible::after{ width:100%; }
+
+.navbar.scrolled{
+  background:rgba(19,52,96,0.97);
+  box-shadow:0 8px 24px rgba(0,0,0,0.12);
+  padding:12px 0;
+  backdrop-filter:blur(6px);
+}
+
+.hamburger{
+  display:none;
+  flex-direction:column;
+  gap:5px;
+  background:none;
+  border:none;
+  cursor:pointer;
+  padding:8px;
+}
+.hamburger span{
+  width:26px; height:2.5px;
+  background:var(--putih);
+  border-radius:2px;
+  transition:transform 0.3s ease, opacity 0.3s ease;
+}
+.hamburger.aktif span:nth-child(1){ transform:translateY(7.5px) rotate(45deg); }
+.hamburger.aktif span:nth-child(2){ opacity:0; }
+.hamburger.aktif span:nth-child(3){ transform:translateY(-7.5px) rotate(-45deg); }
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero{
+  position:relative;
+  min-height:88vh;
+  display:flex;
+  align-items:center;
+  color:var(--putih);
+  background-image:
+    linear-gradient(180deg, rgba(10,25,48,0.78) 0%, rgba(10,25,48,0.62) 45%, rgba(10,25,48,0.92) 100%),
+    url('https://www.riauonline.co.id/foto/bank/images2/SDN-83-Pekanbaru-istimewa.jpg');
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  padding-top:120px;
+}
+.hero-isi{ max-width:720px; }
+.hero .eyebrow{ color:var(--emas); }
+.hero h1{
+  font-family:var(--font-judul);
+  color:var(--putih);
+  font-size:clamp(2.3rem, 5.5vw, 3.6rem);
+  line-height:1.12;
+  margin-bottom:20px;
+}
+.hero p.deskripsi{
+  font-size:1.15rem;
+  color:rgba(255,255,255,0.9);
+  max-width:560px;
+  margin-bottom:34px;
+}
+.hero-tombol{ display:flex; gap:16px; flex-wrap:wrap; margin-bottom:56px; }
+
+.hero-info{
+  display:flex;
+  gap:0;
+  flex-wrap:wrap;
+  border-top:1px solid rgba(255,255,255,0.2);
+  padding-top:28px;
+}
+.hero-info div{
+  padding:0 32px 0 0;
+  margin-right:32px;
+  border-right:1px solid rgba(255,255,255,0.2);
+}
+.hero-info div:last-child{ border-right:none; }
+.hero-info strong{
+  display:block;
+  font-family:var(--font-judul);
+  font-size:1.3rem;
+  color:var(--emas);
+}
+.hero-info span{
+  font-size:0.85rem;
+  color:rgba(255,255,255,0.75);
+}
+
+/* =========================================================
+   PROFIL SEKOLAH
+   ========================================================= */
+.profil{
+  display:grid;
+  grid-template-columns:1.1fr 0.9fr;
+  gap:64px;
+  align-items:start;
+}
+.profil-teks p{ color:var(--abu); margin-bottom:16px; font-size:1.02rem; }
+.kartu-info{
+  background:var(--biru-lembut);
+  border-radius:var(--radius-kartu);
+  padding:36px;
+  border-left:4px solid var(--emas);
+}
+.kartu-info dl{ display:grid; grid-template-columns:1fr; gap:18px; }
+.baris-info{
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  padding-bottom:18px;
+  border-bottom:1px solid rgba(19,52,96,0.1);
+}
+.baris-info:last-child{ border-bottom:none; padding-bottom:0; }
+.baris-info dt{ color:var(--abu); font-size:0.92rem; }
+.baris-info dd{ font-weight:600; text-align:right; color:var(--biru-tua); }
+
+/* =========================================================
+   SAMBUTAN KEPALA SEKOLAH
+   ========================================================= */
+.sambutan{ background:var(--biru-lembut); }
+.sambutan-grid{
+  display:grid;
+  grid-template-columns:280px 1fr;
+  gap:56px;
+  align-items:center;
+}
+.sambutan-foto{
+  width:220px; height:220px;
+  border-radius:50%;
+  background:linear-gradient(145deg, var(--biru), var(--biru-tua));
+  display:flex; align-items:center; justify-content:center;
+  color:var(--emas);
+  font-size:4.5rem;
+  box-shadow:var(--bayangan);
+  border:6px solid var(--putih);
+  margin:0 auto;
+}
+.sambutan-blok{
+  position:relative;
+  background:var(--putih);
+  border-radius:var(--radius-kartu);
+  padding:44px;
+  box-shadow:var(--bayangan);
+}
+.sambutan-blok p{ color:var(--abu); margin-bottom:16px; }
+.sambutan-nama{
+  margin-top:20px;
+  font-family:var(--font-judul);
+  color:var(--biru-tua);
+  font-size:1.15rem;
+}
+.sambutan-jabatan{ color:var(--abu); font-size:0.9rem; }
+
+/* =========================================================
+   VISI & MISI
+   ========================================================= */
+.visimisi-grid{
+  display:grid;
+  grid-template-columns:0.9fr 1.1fr;
+  gap:40px;
+  align-items:stretch;
+}
+.kartu-visi{
+  background:linear-gradient(160deg, var(--biru-tua), var(--biru));
+  color:var(--putih);
+  border-radius:var(--radius-kartu);
+  padding:48px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.kartu-visi i{ color:var(--emas); font-size:2rem; margin-bottom:20px; }
+.kartu-visi h3{ color:var(--putih); font-size:1.5rem; margin-bottom:18px; }
+.kartu-visi p{ font-size:1.15rem; line-height:1.6; font-family:var(--font-judul); font-weight:500; }
+
+.blok-misi h3{ margin-bottom:20px; }
+.daftar-misi{ display:flex; flex-direction:column; gap:14px; }
+.item-misi{
+  display:flex;
+  gap:18px;
+  align-items:flex-start;
+  padding:18px 20px;
+  border-radius:12px;
+  border:1px solid var(--garis);
+  transition:border-color 0.2s ease, background 0.2s ease;
+}
+.item-misi:hover{ border-color:var(--hijau); background:#F4FAF6; }
+.item-misi .nomor{
+  flex-shrink:0;
+  width:34px; height:34px;
+  border-radius:50%;
+  background:var(--hijau);
+  color:var(--putih);
+  display:flex; align-items:center; justify-content:center;
+  font-weight:700;
+  font-size:0.95rem;
+}
+.item-misi p{ color:var(--tinta); font-size:0.98rem; }
+
+/* =========================================================
+   STATISTIK
+   ========================================================= */
+.statistik{ background:var(--biru-tua); color:var(--putih); }
+.statistik .judul-section{ color:var(--putih); }
+.statistik .subteks{ color:rgba(255,255,255,0.7); }
+.grid-statistik{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:24px;
+  margin-top:48px;
+}
+.kartu-statistik{
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:var(--radius-kartu);
+  padding:32px 24px;
+  text-align:center;
+}
+.kartu-statistik .angka{
+  font-family:var(--font-judul);
+  font-size:2.6rem;
+  color:var(--emas);
+  display:block;
+  line-height:1;
+  margin-bottom:10px;
+}
+.kartu-statistik .label{ font-size:0.92rem; color:rgba(255,255,255,0.8); }
+
+/* =========================================================
+   DATA SEKOLAH
+   ========================================================= */
+.tabel-data{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:32px;
+  font-size:0.98rem;
+}
+.tabel-data tr{ border-bottom:1px solid var(--garis); }
+.tabel-data tr:last-child{ border-bottom:none; }
+.tabel-data th, .tabel-data td{
+  text-align:left;
+  padding:16px 12px;
+  vertical-align:top;
+}
+.tabel-data th{
+  width:38%;
+  color:var(--abu);
+  font-weight:500;
+}
+.tabel-data td{ font-weight:600; color:var(--biru-tua); }
+.catatan{
+  margin-top:20px;
+  background:var(--emas-lembut);
+  border-left:4px solid var(--emas);
+  padding:16px 20px;
+  border-radius:8px;
+  font-size:0.92rem;
+  color:#7A5A16;
+  display:flex;
+  gap:12px;
+}
+.catatan i{ margin-top:2px; }
+
+/* =========================================================
+   AKREDITASI (badge)
+   ========================================================= */
+.akreditasi{
+  background:var(--biru-lembut);
+}
+.badge-akreditasi{
+  display:flex;
+  align-items:center;
+  gap:32px;
+  background:var(--putih);
+  border-radius:20px;
+  padding:40px;
+  box-shadow:var(--bayangan);
+  flex-wrap:wrap;
+}
+.lingkaran-a{
+  width:110px; height:110px;
+  border-radius:50%;
+  background:linear-gradient(145deg, var(--emas), #A9741D);
+  color:var(--putih);
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-judul);
+  font-size:3rem;
+  font-weight:700;
+  flex-shrink:0;
+}
+.badge-teks h3{ margin-bottom:8px; }
+.badge-teks p{ color:var(--abu); font-size:0.95rem; }
+.badge-teks p strong{ color:var(--tinta); }
+
+/* =========================================================
+   FASILITAS
+   ========================================================= */
+.grid-fasilitas{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:24px;
+  margin-top:44px;
+}
+.kartu-fasilitas{
+  border:1px solid var(--garis);
+  border-radius:var(--radius-kartu);
+  padding:32px 26px;
+  transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+.kartu-fasilitas:hover{ transform:translateY(-4px); box-shadow:var(--bayangan); }
+.kartu-fasilitas i{ font-size:1.6rem; color:var(--emas); margin-bottom:16px; }
+.kartu-fasilitas h3{ font-size:1.1rem; margin-bottom:8px; }
+.kartu-fasilitas p{ color:var(--abu); font-size:0.92rem; }
+.catatan-fasilitas{
+  margin-top:24px;
+  color:var(--abu);
+  font-size:0.9rem;
+  font-style:italic;
+}
+
+/* =========================================================
+   KONTAK & LOKASI
+   ========================================================= */
+.kontak-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:56px;
+}
+.daftar-kontak{ display:flex; flex-direction:column; gap:22px; }
+.item-kontak{ display:flex; gap:18px; align-items:flex-start; }
+.item-kontak .ikon{
+  width:46px; height:46px;
+  border-radius:12px;
+  background:var(--biru-lembut);
+  color:var(--biru-tua);
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0;
+  font-size:1.1rem;
+}
+.item-kontak strong{ display:block; color:var(--biru-tua); margin-bottom:2px; }
+.item-kontak a, .item-kontak span{ color:var(--abu); font-size:0.95rem; }
+.item-kontak a:hover{ color:var(--biru); text-decoration:underline; }
+
+.peta-bingkai{
+  border-radius:var(--radius-kartu);
+  overflow:hidden;
+  box-shadow:var(--bayangan);
+  border:1px solid var(--garis);
+}
+.peta-bingkai iframe{ width:100%; height:100%; min-height:340px; border:0; display:block; }
+.tombol-peta{ margin-top:16px; text-align:center; }
+
+/* =========================================================
+   CTA
+   ========================================================= */
+.cta{
+  background:linear-gradient(135deg, var(--biru-tua), var(--biru));
+  color:var(--putih);
+  text-align:center;
+  padding:88px 0;
+}
+.cta h2{ color:var(--putih); font-size:clamp(1.6rem, 3.4vw, 2.3rem); margin-bottom:16px; }
+.cta p{ color:rgba(255,255,255,0.82); max-width:560px; margin:0 auto 32px; font-size:1.05rem; }
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+footer{ background:#0E2748; color:rgba(255,255,255,0.85); padding:72px 0 0; }
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.3fr 1fr 1fr 1fr;
+  gap:40px;
+  padding-bottom:48px;
+  border-bottom:1px solid rgba(255,255,255,0.12);
+}
+.footer-grid h3, .footer-grid h4{ color:var(--putih); }
+.footer-grid h3{ font-size:1.15rem; margin-bottom:14px; }
+.footer-grid h4{ font-size:0.98rem; margin-bottom:16px; font-family:var(--font-teks); font-weight:600; }
+.footer-grid p{ font-size:0.92rem; color:rgba(255,255,255,0.65); line-height:1.7; }
+.footer-grid ul{ display:flex; flex-direction:column; gap:10px; }
+.footer-grid ul a{ font-size:0.92rem; color:rgba(255,255,255,0.7); transition:color 0.2s ease; }
+.footer-grid ul a:hover{ color:var(--emas); }
+.footer-bawah{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:24px 0;
+  font-size:0.85rem;
+  color:rgba(255,255,255,0.55);
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+/* Tombol kembali ke atas */
+#keAtas{
+  position:fixed;
+  bottom:28px; right:28px;
+  width:48px; height:48px;
+  border-radius:50%;
+  background:var(--biru-tua);
+  color:var(--putih);
+  border:none;
+  display:flex; align-items:center; justify-content:center;
+  cursor:pointer;
+  box-shadow:0 8px 20px rgba(0,0,0,0.25);
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(10px);
+  transition:opacity 0.3s ease, transform 0.3s ease, background 0.2s ease;
+  z-index:900;
+}
+#keAtas.tampil{ opacity:1; visibility:visible; transform:translateY(0); }
+#keAtas:hover{ background:var(--biru); }
+
+/* Animasi masuk viewport (sederhana, sekali jalan) */
+.reveal{
+  opacity:1;
+  transform:none;
+  transition:opacity 0.6s ease, transform 0.6s ease;
+}
+.js-ready .reveal{
+  opacity:0;
+  transform:translateY(18px);
+}
+.js-ready .reveal.tampak{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* =========================================================
+   RESPONSIVE - TABLET (768px - 1199px)
+   ========================================================= */
+@media (max-width:1199px){
+  .grid-statistik{ grid-template-columns:repeat(3, 1fr); }
+  .grid-fasilitas{ grid-template-columns:repeat(2, 1fr); }
+  .footer-grid{ grid-template-columns:1fr 1fr; }
+}
+
+@media (max-width:960px){
+  .profil{ grid-template-columns:1fr; gap:40px; }
+  .visimisi-grid{ grid-template-columns:1fr; }
+  .kartu-visi{ padding:36px; }
+  .sambutan-grid{ grid-template-columns:1fr; text-align:center; }
+  .sambutan-foto{ margin:0 auto; }
+  .kontak-grid{ grid-template-columns:1fr; }
+}
+
+/* =========================================================
+   RESPONSIVE - SMARTPHONE (<768px)
+   ========================================================= */
+@media (max-width:767px){
+  section{ padding:64px 0; }
+
+  .hamburger{ display:flex; }
+  .navbar-menu{
+    position:fixed;
+    top:0; right:0;
+    height:100vh;
+    width:min(78vw, 320px);
+    background:var(--biru-tua);
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:flex-start;
+    gap:6px;
+    padding:100px 32px 32px;
+    transform:translateX(100%);
+    transition:transform 0.35s ease;
+    box-shadow:-10px 0 30px rgba(0,0,0,0.25);
+  }
+  .navbar-menu.terbuka{ transform:translateX(0); }
+  .navbar-menu a{ display:block; padding:12px 0; width:100%; font-size:1.05rem; }
+
+  .hero{ min-height:92vh; padding-top:110px; text-align:left; }
+  .hero-tombol{ flex-direction:column; }
+  .hero-tombol .btn{ width:100%; justify-content:center; }
+  .hero-info{ gap:16px 0; }
+  .hero-info div{ flex:1 1 45%; border-right:none; margin-right:0; padding-right:0; }
+
+  .grid-statistik{ grid-template-columns:repeat(2, 1fr); }
+  .grid-fasilitas{ grid-template-columns:1fr; }
+  .footer-grid{ grid-template-columns:1fr; gap:32px; }
+  .footer-bawah{ flex-direction:column; text-align:center; }
+
+  .badge-akreditasi{ flex-direction:column; text-align:center; }
+
+  .tabel-data{ font-size:0.9rem; }
+  .tabel-data th, .tabel-data td{ padding:12px 8px; }
+
+  #keAtas{ right:18px; bottom:18px; }
+}
+</style>
+</head>
+
+<body>
+<script>document.documentElement.classList.add("js-ready");</script>
+
+<!-- =========================================================
+     NAVBAR
+     ========================================================= -->
+<header class="navbar" id="navbar">
+  <div class="wrap">
+    <a href="#beranda" class="navbar-brand">
+      <span class="lencana" aria-hidden="true">83</span>
+      <span>
+        SD Negeri 83 Pekanbaru
+        <small>Website Resmi Sekolah</small>
+      </span>
+    </a>
+
+    <nav aria-label="Navigasi utama">
+      <ul class="navbar-menu" id="navMenu">
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#profil">Profil</a></li>
+        <li><a href="#visimisi">Visi &amp; Misi</a></li>
+        <li><a href="#sambutan">Sambutan</a></li>
+        <li><a href="#data-sekolah">Data Sekolah</a></li>
+        <li><a href="#fasilitas">Fasilitas</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- =========================================================
+     HERO SECTION
+     ========================================================= -->
+<section class="hero" id="beranda">
+  <div class="wrap hero-isi">
+    <p class="eyebrow">Selamat datang di website resmi</p>
+    <h1>SD Negeri 83 Pekanbaru</h1>
+    <p class="deskripsi">Mewujudkan pendidikan dasar yang berkualitas, berkarakter, dan berorientasi pada perkembangan potensi peserta didik.</p>
+
+    <div class="hero-tombol">
+      <a href="#profil" class="btn btn-utama">Jelajahi Sekolah</a>
+      <a href="#sambutan" class="btn btn-luar">Tentang Kami</a>
+    </div>
+
+    <div class="hero-info">
+      <div><strong>10404389</strong><span>NPSN</span></div>
+      <div><strong>A</strong><span>Akreditasi</span></div>
+      <div><strong>Negeri</strong><span>Status Sekolah</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     PROFIL SEKOLAH
+     ========================================================= -->
+<section id="profil">
+  <div class="wrap profil">
+    <div class="profil-teks reveal">
+      <p class="eyebrow">Profil Sekolah</p>
+      <h2 class="judul-section">Mengenal SD Negeri 83 Pekanbaru</h2>
+      <p>SD Negeri 83 Pekanbaru adalah sekolah dasar negeri yang berada di bawah naungan Pemerintah Pusat melalui Kementerian Pendidikan Dasar dan Menengah. Sekolah ini berlokasi di Jalan Pontianak No. 8, Pekanbaru, dan telah lama menjadi bagian dari perjalanan pendidikan dasar di wilayah Kecamatan Bukit Raya.</p>
+      <p>Dengan status akreditasi A, sekolah berkomitmen menghadirkan proses belajar mengajar yang berkualitas, membentuk karakter peserta didik, serta mendukung tumbuh kembang potensi akademik dan nonakademik setiap siswa.</p>
+    </div>
+
+    <div class="kartu-info reveal">
+      <dl>
+        <div class="baris-info"><dt>Nama Sekolah</dt><dd>SD Negeri 83 Pekanbaru</dd></div>
+        <div class="baris-info"><dt>NPSN</dt><dd>10404389</dd></div>
+        <div class="baris-info"><dt>Jenjang</dt><dd>Sekolah Dasar (SD)</dd></div>
+        <div class="baris-info"><dt>Status</dt><dd>Negeri</dd></div>
+        <div class="baris-info"><dt>Akreditasi</dt><dd>A</dd></div>
+        <div class="baris-info"><dt>Naungan</dt><dd>Pemerintah Pusat / Kemendikdasmen</dd></div>
+        <div class="baris-info"><dt>Alamat</dt><dd>Jl. Pontianak No. 8, Pekanbaru</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     KATA SAMBUTAN KEPALA SEKOLAH
+     ========================================================= -->
+<section class="sambutan" id="sambutan">
+  <div class="wrap">
+    <div class="sambutan-grid">
+      <div class="reveal">
+        <!-- Foto placeholder karena foto asli belum tersedia -->
+        <div class="sambutan-foto" aria-hidden="true">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <p class="sambutan-nama" style="text-align:center;">Syamsimar, S.Pd.</p>
+        <p class="sambutan-jabatan" style="text-align:center;">Kepala Sekolah</p>
+      </div>
+
+      <div class="sambutan-blok reveal">
+        <p class="eyebrow">Kata Sambutan Kepala Sekolah</p>
+        <p>Assalamu'alaikum Warahmatullahi Wabarakatuh.</p>
+        <p>Puji syukur kita panjatkan ke hadirat Allah SWT atas segala rahmat dan karunia-Nya. Selamat datang di website resmi SD Negeri 83 Pekanbaru.</p>
+        <p>Website ini diharapkan dapat menjadi sarana informasi bagi peserta didik, orang tua, masyarakat, serta seluruh pihak yang berkepentingan untuk mengenal lebih dekat lingkungan, kegiatan, dan perkembangan sekolah.</p>
+        <p>Kami berkomitmen untuk terus memberikan pelayanan pendidikan yang berkualitas serta membangun lingkungan belajar yang aman, positif, dan mendukung perkembangan potensi setiap peserta didik.</p>
+        <p>Semoga SD Negeri 83 Pekanbaru dapat terus berkembang dan memberikan kontribusi terbaik bagi dunia pendidikan.</p>
+        <p>Wassalamu'alaikum Warahmatullahi Wabarakatuh.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     VISI & MISI
+     ========================================================= -->
+<section id="visimisi">
+  <div class="wrap">
+    <p class="eyebrow">Arah dan Tujuan</p>
+    <h2 class="judul-section">Visi &amp; Misi Sekolah</h2>
+
+    <div class="visimisi-grid" style="margin-top:40px;">
+      <div class="kartu-visi reveal">
+        <i class="fa-solid fa-seedling" aria-hidden="true"></i>
+        <h3>Visi Sekolah</h3>
+        <p>"Terwujudnya peserta didik yang beriman, berkarakter, berprestasi, mandiri, serta memiliki kepedulian terhadap lingkungan dan masyarakat."</p>
+      </div>
+
+      <div class="blok-misi reveal">
+        <h3>Misi Sekolah</h3>
+        <div class="daftar-misi">
+          <div class="item-misi"><span class="nomor">1</span><p>Menyelenggarakan pembelajaran yang aktif, kreatif, efektif, dan menyenangkan.</p></div>
+          <div class="item-misi"><span class="nomor">2</span><p>Membentuk peserta didik yang beriman, bertakwa, berakhlak mulia, dan berkarakter positif.</p></div>
+          <div class="item-misi"><span class="nomor">3</span><p>Mengembangkan potensi akademik dan nonakademik peserta didik sesuai bakat dan minatnya.</p></div>
+          <div class="item-misi"><span class="nomor">4</span><p>Meningkatkan budaya disiplin, tanggung jawab, kemandirian, dan gotong royong.</p></div>
+          <div class="item-misi"><span class="nomor">5</span><p>Menciptakan lingkungan sekolah yang aman, nyaman, sehat, bersih, dan ramah bagi peserta didik.</p></div>
+          <div class="item-misi"><span class="nomor">6</span><p>Meningkatkan kerja sama antara sekolah, orang tua, dan masyarakat dalam mendukung pendidikan peserta didik.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     STATISTIK SEKOLAH
+     ========================================================= -->
+<section class="statistik">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--emas);">Sekilas Angka</p>
+    <h2 class="judul-section">Sekilas Tentang Sekolah</h2>
+    <p class="subteks">Data ringkas mengenai jumlah tenaga pendidik, peserta didik, dan ruang belajar di SD Negeri 83 Pekanbaru.</p>
+
+    <div class="grid-statistik">
+      <div class="kartu-statistik reveal"><span class="angka" data-target="25">0</span><span class="label">Guru</span></div>
+      <div class="kartu-statistik reveal"><span class="angka" data-target="497">0</span><span class="label">Peserta Didik</span></div>
+      <div class="kartu-statistik reveal"><span class="angka" data-target="229">0</span><span class="label">Siswa Laki-laki</span></div>
+      <div class="kartu-statistik reveal"><span class="angka" data-target="268">0</span><span class="label">Siswa Perempuan</span></div>
+      <div class="kartu-statistik reveal"><span class="angka" data-target="13">0</span><span class="label">Ruang Kelas</span></div>
+      <div class="kartu-statistik reveal"><span class="angka" data-target="0">0</span><span class="label">Laboratorium</span></div>
+      <div class="kartu-statistik reveal"><span class="angka" data-target="0">0</span><span class="label">Perpustakaan</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     DATA SEKOLAH
+     ========================================================= -->
+<section id="data-sekolah">
+  <div class="wrap">
+    <p class="eyebrow">Administrasi</p>
+    <h2 class="judul-section">Data Sekolah</h2>
+
+    <div style="overflow-x:auto;">
+      <table class="tabel-data">
+        <tbody>
+          <tr><th scope="row">Nama Sekolah</th><td>SD Negeri 83 Pekanbaru</td></tr>
+          <tr><th scope="row">NPSN</th><td>10404389</td></tr>
+          <tr><th scope="row">Naungan</th><td>Pemerintah Pusat / Kementerian Pendidikan Dasar dan Menengah</td></tr>
+          <tr><th scope="row">Tanggal Berdiri</th><td>31 Desember 1979</td></tr>
+          <tr><th scope="row">No. SK Pendirian</th><td>— (tidak tercantum pada data Dapodik)</td></tr>
+          <tr><th scope="row">Tanggal Operasional</th><td>1 Januari 1910</td></tr>
+          <tr><th scope="row">No. SK Operasional</th><td>— (tidak tercantum)</td></tr>
+          <tr><th scope="row">Jenjang Pendidikan</th><td>Pendidikan Dasar (DIKDAS) / Sekolah Dasar (SD)</td></tr>
+          <tr><th scope="row">Status Sekolah</th><td>Negeri</td></tr>
+          <tr><th scope="row">Akreditasi</th><td>A</td></tr>
+          <tr><th scope="row">Tanggal Akreditasi</th><td>8 Desember 2021</td></tr>
+          <tr><th scope="row">No. SK Akreditasi</th><td>1347/BAN-SM/SK/2021</td></tr>
+          <tr><th scope="row">Sertifikasi</th><td>— (Sertifikasi ISO tidak tercantum)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="catatan">
+      <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+      <p>Tanggal operasional yang tercantum pada database adalah 1 Januari 1910. Karena tanggal tersebut tidak wajar secara historis, data ini sebaiknya dikonfirmasi kembali kepada pihak sekolah atau sumber administrasi resmi.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     AKREDITASI (BADGE)
+     ========================================================= -->
+<section class="akreditasi">
+  <div class="wrap">
+    <div class="badge-akreditasi reveal">
+      <div class="lingkaran-a" aria-hidden="true">A</div>
+      <div class="badge-teks">
+        <h3>Terakreditasi A</h3>
+        <p><strong>Tanggal Akreditasi:</strong> 8 Desember 2021</p>
+        <p><strong>Nomor SK:</strong> 1347/BAN-SM/SK/2021</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     FASILITAS
+     ========================================================= -->
+<section id="fasilitas">
+  <div class="wrap">
+    <p class="eyebrow">Sarana Sekolah</p>
+    <h2 class="judul-section">Fasilitas Sekolah</h2>
+
+    <div class="grid-fasilitas">
+      <div class="kartu-fasilitas reveal">
+        <i class="fa-solid fa-chalkboard" aria-hidden="true"></i>
+        <h3>Ruang Kelas</h3>
+        <p>13 ruang kelas digunakan untuk mendukung kegiatan belajar mengajar sehari-hari.</p>
+      </div>
+      <div class="kartu-fasilitas reveal">
+        <i class="fa-solid fa-flask" aria-hidden="true"></i>
+        <h3>Laboratorium</h3>
+        <p>0 laboratorium tercatat pada data yang tersedia.</p>
+      </div>
+      <div class="kartu-fasilitas reveal">
+        <i class="fa-solid fa-book" aria-hidden="true"></i>
+        <h3>Perpustakaan</h3>
+        <p>0 perpustakaan tercatat pada data yang tersedia.</p>
+      </div>
+      <div class="kartu-fasilitas reveal">
+        <i class="fa-solid fa-tree" aria-hidden="true"></i>
+        <h3>Lingkungan Belajar</h3>
+        <p>Lingkungan sekolah yang mendukung proses pembelajaran dan aktivitas peserta didik.</p>
+      </div>
+    </div>
+
+    <p class="catatan-fasilitas">Catatan: angka 0 pada fasilitas laboratorium dan perpustakaan berarti fasilitas tersebut tidak tercatat pada data yang tersedia, bukan berarti dapat dipastikan secara fisik tidak ada.</p>
+  </div>
+</section>
+
+<!-- =========================================================
+     CTA
+     ========================================================= -->
+<section class="cta">
+  <div class="wrap">
+    <h2>Mengenal Lebih Dekat SD Negeri 83 Pekanbaru</h2>
+    <p>Temukan informasi mengenai sekolah, lingkungan pendidikan, kegiatan, serta berbagai informasi penting lainnya.</p>
+    <a href="#kontak" class="btn btn-utama">Hubungi Sekolah</a>
+  </div>
+</section>
+
+<!-- =========================================================
+     KONTAK & LOKASI
+     ========================================================= -->
+<section id="kontak">
+  <div class="wrap">
+    <p class="eyebrow">Alamat &amp; Kontak</p>
+    <h2 class="judul-section">Hubungi Kami</h2>
+
+    <div class="kontak-grid" style="margin-top:40px;">
+      <div class="daftar-kontak reveal">
+
+        <div class="item-kontak">
+          <div class="ikon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+          <div>
+            <strong>Alamat</strong>
+            <span>Jl. Pontianak No. 8, Kelurahan Tengkerang Utara, Kecamatan Bukit Raya, Kota Pekanbaru, Provinsi Riau</span>
+          </div>
+        </div>
+
+        <div class="item-kontak">
+          <div class="ikon"><i class="fa-solid fa-phone" aria-hidden="true"></i></div>
+          <div>
+            <strong>Telepon / Fax</strong>
+            <a href="tel:076141573">0761-41573</a>
+          </div>
+        </div>
+
+        <div class="item-kontak">
+          <div class="ikon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></div>
+          <div>
+            <strong>Email</strong>
+            <a href="mailto:sdn83pekanbaru@gmail.com">sdn83pekanbaru@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="item-kontak">
+          <div class="ikon"><i class="fa-solid fa-globe" aria-hidden="true"></i></div>
+          <div>
+            <strong>Website</strong>
+            <a href="https://sdn83pekanbaru.sch.id" target="_blank" rel="noopener noreferrer">sdn83pekanbaru.sch.id</a>
+          </div>
+        </div>
+
+        <div class="item-kontak">
+          <div class="ikon"><i class="fa-solid fa-user-tie" aria-hidden="true"></i></div>
+          <div>
+            <strong>Kepala Sekolah</strong>
+            <span>Syamsimar, S.Pd.</span>
+          </div>
+        </div>
+
+        <div class="item-kontak">
+          <div class="ikon"><i class="fa-solid fa-headset" aria-hidden="true"></i></div>
+          <div>
+            <strong>Operator Sekolah</strong>
+            <span>Khairus Saleh</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- LOKASI SEKOLAH -->
+      <div class="reveal">
+        <div class="peta-bingkai">
+          <iframe
+            title="Lokasi SD Negeri 83 Pekanbaru"
+            src="https://www.google.com/maps?q=Jl.+Pontianak+No.8,+Tengkerang+Utara,+Bukit+Raya,+Pekanbaru,+Riau&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <div class="tombol-peta">
+          <a class="btn btn-kontak" href="https://www.google.com/maps/search/?api=1&query=Jl.+Pontianak+No.8+Tengkerang+Utara+Bukit+Raya+Pekanbaru+Riau" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
+            Lihat Lokasi di Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h3>SD Negeri 83 Pekanbaru</h3>
+        <p>Sekolah dasar negeri yang berkomitmen mewujudkan pendidikan dasar berkualitas, berkarakter, dan berorientasi pada perkembangan potensi peserta didik.</p>
+      </div>
+
+      <div>
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#profil">Profil</a></li>
+          <li><a href="#visimisi">Visi &amp; Misi</a></li>
+          <li><a href="#sambutan">Sambutan</a></li>
+          <li><a href="#data-sekolah">Data Sekolah</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Kontak</h4>
+        <ul>
+          <li>Jl. Pontianak No. 8, Pekanbaru</li>
+          <li><a href="tel:076141573">0761-41573</a></li>
+          <li><a href="mailto:sdn83pekanbaru@gmail.com">sdn83pekanbaru@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Informasi</h4>
+        <ul>
+          <li>NPSN: 10404389</li>
+          <li>Akreditasi: A</li>
+          <li>Status: Negeri</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bawah">
+      <span>&copy; 2026 SD Negeri 83 Pekanbaru. Semua hak dilindungi.</span>
+      <span>Website Profil Sekolah</span>
+    </div>
+  </div>
+</footer>
+
+<button id="keAtas" aria-label="Kembali ke atas">
+  <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+</button>
+
+<script>
+/* =========================================================
+   JAVASCRIPT VANILLA
+   Semua interaksi website diatur di sini.
+   ========================================================= */
+document.addEventListener('DOMContentLoaded', function () {
+
+  // ---- 1. NAVBAR BERUBAH SAAT SCROLL ----
+  var navbar = document.getElementById('navbar');
+  function periksaScroll () {
+    if (window.scrollY > 40) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  }
+  window.addEventListener('scroll', periksaScroll);
+  periksaScroll();
+
+  // ---- 2. HAMBURGER MENU (MOBILE) ----
+  var hamburger = document.getElementById('hamburger');
+  var navMenu   = document.getElementById('navMenu');
+
+  hamburger.addEventListener('click', function () {
+    var terbuka = navMenu.classList.toggle('terbuka');
+    hamburger.classList.toggle('aktif', terbuka);
+    hamburger.setAttribute('aria-expanded', terbuka ? 'true' : 'false');
+  });
+
+  // Tutup menu mobile setelah salah satu link diklik
+  var tautanMenu = navMenu.querySelectorAll('a');
+  tautanMenu.forEach(function (tautan) {
+    tautan.addEventListener('click', function () {
+      navMenu.classList.remove('terbuka');
+      hamburger.classList.remove('aktif');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // ---- 3. SMOOTH SCROLL UNTUK LINK NAVBAR ----
+  // (scroll-behavior:smooth pada CSS sudah menangani sebagian besar,
+  //  namun kode berikut memastikan offset navbar sticky diperhitungkan)
+  document.querySelectorAll('a[href^="#"]').forEach(function (tautan) {
+    tautan.addEventListener('click', function (e) {
+      var id = this.getAttribute('href');
+      var target = document.querySelector(id);
+      if (target) {
+        e.preventDefault();
+        var offset = 80;
+        var posisi = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: posisi, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // ---- 4. COUNTER ANIMASI STATISTIK ----
+  var angkaStatistik = document.querySelectorAll('.angka');
+  var statistikSelesai = false;
+
+  function jalankanCounter (elemen) {
+    var target = parseInt(elemen.getAttribute('data-target'), 10) || 0;
+    var durasi = 1400;
+    var mulai = null;
+
+    function langkah (waktu) {
+      if (!mulai) mulai = waktu;
+      var progres = Math.min((waktu - mulai) / durasi, 1);
+      var nilai = Math.floor(progres * target);
+      elemen.textContent = nilai;
+      if (progres < 1) {
+        requestAnimationFrame(langkah);
+      } else {
+        elemen.textContent = target;
+      }
+    }
+    requestAnimationFrame(langkah);
+  }
+
+  // ---- 5. OBSERVER UNTUK ANIMASI MASUK VIEWPORT ----
+  var elemenReveal = document.querySelectorAll('.reveal');
+  var statistikSection = document.querySelector('.statistik');
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('tampak');
+
+        // Jalankan counter statistik satu kali saat section terlihat
+        if (entry.target === statistikSection && !statistikSelesai) {
+          statistikSelesai = true;
+          angkaStatistik.forEach(jalankanCounter);
+        }
+
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  elemenReveal.forEach(function (el) { observer.observe(el); });
+  if (statistikSection) { observer.observe(statistikSection); }
+
+  // ---- 6. TOMBOL KEMBALI KE ATAS ----
+  var keAtas = document.getElementById('keAtas');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 480) {
+      keAtas.classList.add('tampil');
+    } else {
+      keAtas.classList.remove('tampil');
+    }
+  });
+  keAtas.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+});
+</script>
+</body>
+</html>
